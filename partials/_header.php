@@ -19,7 +19,7 @@ echo'
 <a class="nav-link text-light" href="index.php">Home <span class="sr-only"></span></a>
 </li>
 <li class="nav-item">
-<a class="nav-link text-light" href="add.php">All Recipe</a>
+<a class="nav-link text-light" href="allrecipe.php">All Recipe</a>
 </li>
 <li class="nav-item">
 <a class="nav-link text-light" href="about.php">About</a>

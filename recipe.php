@@ -29,17 +29,13 @@ if (isset($_GET['delete'])) {
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
     <title>Welcome  <?php echo $userRow['FirstName']; ?></title>
-    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="dashboard.css" rel="stylesheet">
 </head>
 
 <body>
-
-
-    <!-- Navigation -->
     <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="admindashboard.php">Welcome
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="recipe.php">Welcome
             <?php echo $userRow['FirstName']; ?>
         </a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +48,12 @@ if (isset($_GET['delete'])) {
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="position-sticky pt-3 sidebar-sticky">
                     <ul class="nav flex-column">
-                        
+                    <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.php">
+                                <span data-feather="home" class="align-text-bottom"></span>
+                                Home
+                            </a>
+                    </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="user.php">
                                 <span data-feather="file" class="align-text-bottom"></span>
@@ -82,17 +83,12 @@ if (isset($_GET['delete'])) {
                     </ul>
                 </div>
             </nav>
-            <!-- navigation end -->
-            <!-- <div class="container-fluid"> -->
 
-
-            <!-- Page Heading -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Manage Your Recipe</h1>
                 </div>
-                <!-- Page Heading end-->
-                <!-- Appointment list -->
+
                 <h2 class="my-4">View / Delete Recipe</h2>
                 <div class="col-md-12 col-sm-9  user-wrapper">
                     <div class="description">
@@ -101,7 +97,6 @@ if (isset($_GET['delete'])) {
                                 <div class="container my-4" id="ques">
                                     
                                     <div class="row my-4">
-                                        <!-- Fetch all the categories and use a loop to iterate through categories -->
                                         <?php
                                         $sql = "SELECT * FROM `recipe` WHERE id ='$usersession'";
                                         $result = mysqli_query($conn, $sql);

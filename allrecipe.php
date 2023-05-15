@@ -125,18 +125,22 @@
 
   <div class="container marketing">
     <div class="container my-4" id="ques">
-        <h2 class="text-center my-4">Some delicious Recipe</h2>
+        <h2 class="text-center my-4">All delicious Recipe</h2>
+        <form class="d-flex my-4" role="search" method="get" action="recipesearch.php">
+                     <input class="form-control me-2" type="search" id="search" class="search" name="search" placeholder="Search Recipe" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
         <div class="row my-4">
           <?php 
          $sql = "SELECT * FROM `recipe`"; 
          $result = mysqli_query($conn, $sql);
-        //  $num=0;
+         $num=0;
          while($row = mysqli_fetch_assoc($result)){
            $id = $row['sno'];
            $cat = $row['name'];
            $desc = $row['description'];
-          //  $num=$num+1;
-          //  if ($id<=3) {
+           $num=$num+1;
+           if ($num<=3) {
             # code...
             echo '<div class="col-md-4 my-2">
             <div class="card" style="width: 18rem; height:25rem;">
@@ -148,56 +152,11 @@
            </div>
            </div>
            </div>';
-          // }
+          }
           } 
           ?>
         </div>
     </div>
-
-
-    
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Increase the flavor. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <!-- <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p> -->
-      </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="images/card-1.jpg" width="500" height="500"  role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">Try it once.</span></h2>
-        <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p> -->
-      </div>
-      <div class="col-md-5 order-md-1">
-      <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="images/card-1.jpg" width="500" height="500"  role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <!-- <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p> -->
-      </div>
-      <div class="col-md-5">
-      <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="images/card-1.jpg" width="500" height="500"  role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
 
   </div><!-- /.container -->
 

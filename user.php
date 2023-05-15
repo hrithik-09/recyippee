@@ -50,7 +50,7 @@ if ($userRow['Gender'] == 'male') {
 <body>
 	<!-- navigation -->
 	<header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="dashboard.php">Welcome
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="user.php">Welcome
 		<?php echo $userRow['FirstName']; ?>
 		</a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,6 +63,12 @@ if ($userRow['Gender'] == 'male') {
 				<div class="position-sticky pt-3 sidebar-sticky">
                     <ul class="nav flex-column">
                         
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.php">
+                                <span data-feather="home" class="align-text-bottom"></span>
+                                Home
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="user.php">
                                 <span data-feather="file" class="align-text-bottom"></span>
