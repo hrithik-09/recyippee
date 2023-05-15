@@ -142,7 +142,7 @@
             # code...
             echo '<div class="col-md-4 my-2">
             <div class="card" style="width: 18rem; height:25rem;">
-            <img src="images/card-'.$id. '.jpg" class="card-img-top" style="height: 214px;"alt="image for this category">
+            <img src="images/card-1.jpg" class="card-img-top" style="height: 214px;"alt="image for this category">
             <div class="card-body">
             <h5 class="card-title"><a href="'.$id.'.php">' . $cat . '</a></h5>
             <p class="card-text">' . substr($desc, 0, 90). '... </p>
