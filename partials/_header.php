@@ -31,7 +31,7 @@ echo'
         </ul>';
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
                 echo'
-                <a href="user/user.php" class="btn btn-outline-light me-4">'.$_SESSION['useremail'].'</a>';
+                <a href="user.php" class="btn btn-outline-light me-4">'.$_SESSION['useremail'].'</a>';
                 echo '<a href="/recyippee/addrecipe.php" class="btn btn-outline-light me-4" data-bs-toggle="modal" data-bs-target="#recipeModal">Add Recipe</a>';
                 echo'
                 <a href="partials/_logout.php" class="btn btn-outline-light">Logout</a>';
