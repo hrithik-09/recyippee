@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
 <?php
-
-
+error_reporting(E_ERROR | E_WARNING | E_PARSE); 
+  
+session_start();
 // include_once '../connection/server.php';
 include_once 'partials/_dbconnect.php';
 if (!isset($_SESSION['sno'])) {
